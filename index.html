@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mosca</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="coluna">
+        <img src="imagens/game.png" alt="">
+    </div>
+    <div class="coluna">
+        <select id="dificuldade">
+            <option value="">-- Selecone a Dificuldade --</option>
+            <option value="facil">Fácil</option>
+            <option value="medio">Médio</option>
+            <option value="dificil">Difícil</option>
+        </select>
+    </div>
+    <div class="coluna">
+        <button onclick="jogar()">Jogar</button>
+    </div>
+
+    <script>
+        function jogar(){
+            let dificuldade = document.getElementById('dificuldade').value
+            if(dificuldade == ''){
+                alert('Selecione uma dificuldade')
+            } else{
+                window.location.href = 'app.html?' + dificuldade
+            }
+            
+        }
+    </script>
+</body>
+</html>
